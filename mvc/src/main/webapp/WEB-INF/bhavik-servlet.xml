@@ -23,9 +23,9 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/telusko"></property>
-		<property name="user" value="root"></property>
-		<property name="password" value="12345678"></property>
+			value="jdbc:mysql://localhost:3306/demo"></property>
+		<property name="user" value="student"></property>
+		<property name="password" value="student"></property>
 
 		<property name="minPoolSize" value="5" />
 		<property name="maxPoolSize" value="10" />
@@ -37,7 +37,7 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
 		<property name="packageToScan"
-			value="com.telusko.springmvc.model" />
+			value="com.bhavik.springmvc.model" />
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
