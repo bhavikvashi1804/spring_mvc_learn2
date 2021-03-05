@@ -5,6 +5,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.bhavik.springmvc.model.Person;
+
 @Controller
 public class PersonController {
 
@@ -16,9 +18,13 @@ public class PersonController {
 	@GetMapping("/submitPerson")
 	public String showPersonResult(ModelMap m, @RequestParam("id") int id, @RequestParam("name") String name,
 			@RequestParam("age") int age) {
-		m.addAttribute("id", id);
-		m.addAttribute("name", name);
-		m.addAttribute("age", age);
+		
+		//use the object to pass the information from Controller to View
+		Person p = new Person();
+		p.setId(id);
+		p.setName(name);
+		p.setAge(age);
+		m.addAttribute("person", p);
 		return "personresult";
 	}
 }

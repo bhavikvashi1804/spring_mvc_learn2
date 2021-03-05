@@ -10,15 +10,15 @@
 	<table>
 		<tr>
 			<td>Person ID: </td>
-			<td>${id}</td>
+			<td>${person.getId()}</td>
 		</tr>
 		<tr>
 			<td>Person Name: </td>
-			<td>${name}</td>
+			<td>${person.getName()}</td>
 		</tr>
 		<tr>
 			<td>Person Age: </td>
-			<td>${age}</td>
+			<td>${person.getAge()}</td>
 		</tr>
 	</table>
 </body>
