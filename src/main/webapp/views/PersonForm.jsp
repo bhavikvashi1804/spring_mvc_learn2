@@ -15,11 +15,11 @@
 			</tr>
 			<tr>
 				<td>Person Name</td>
-				<td><input type="text" name="num1" /></td>
+				<td><input type="text" name="name" /></td>
 			</tr>
 			<tr>
 				<td>Person Age</td>
-				<td><input type="number" name="num1" /></td>
+				<td><input type="number" name="age" /></td>
 			</tr>
 			<tr>
 				<td><input type="submit" ></td>
