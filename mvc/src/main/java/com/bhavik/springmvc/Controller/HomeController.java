@@ -11,7 +11,7 @@ class HomeController {
 
 	@GetMapping("/")
 	public String showWelcomePage() {
-		return "Welcome";
+		return "index";
 	}
 
 	@GetMapping("/calculator")
