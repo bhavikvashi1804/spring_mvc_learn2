@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>${date}</h1>
 	<table>
 		<tr>
 			<td>Person ID: </td>
