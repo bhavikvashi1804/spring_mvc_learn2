@@ -1,9 +1,8 @@
 package com.bhavik.springmvc.Controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.bhavik.springmvc.model.Person;
 
@@ -16,15 +15,8 @@ public class PersonController {
 	}
 
 	@GetMapping("/submitPerson")
-	public String showPersonResult(ModelMap m, @RequestParam("id") int id, @RequestParam("name") String name,
-			@RequestParam("age") int age) {
-		
-		//use the object to pass the information from Controller to View
-		Person p = new Person();
-		p.setId(id);
-		p.setName(name);
-		p.setAge(age);
-		m.addAttribute("person", p);
+	public String showPersonResult(@ModelAttribute("person") Person p) {
+		// We do not have to pass the ModelAttribute to next page, it will automatically do it		
 		return "personresult";
 	}
 }
