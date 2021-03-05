@@ -13,18 +13,18 @@ class HomeController {
 	
 	@GetMapping("/")
 	public String showWelcomePage() {
-		return "Welcome.jsp";
+		return "Welcome";
 	}
 	
 	@GetMapping("/calculator")
 	public String showCalPage() {
-		return "cal.jsp";
+		return "cal";
 	}
 	
 	@GetMapping("/result")
 	public ModelAndView showResultPage(@RequestParam("num1") int i,@RequestParam("num2") int j) {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("result.jsp");
+		mav.setViewName("result");
 		int sum = i + j;
 		mav.addObject("sum", sum);
 		return mav;
