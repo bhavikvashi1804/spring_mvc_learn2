@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/result">
+	<form action="/result1">
 		1st Number<input type="number" name="num1"/><br /> 
 		2nd Number<input type="number" name="num2" /><br> 
 		<input type="submit">
