@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 class HomeController {
@@ -20,12 +21,8 @@ class HomeController {
 	}
 	
 	@GetMapping("/result")
-	public String showResultPage(HttpServletRequest req) {
-		int i = Integer.parseInt(req.getParameter("num1"));
-		int j = Integer.parseInt(req.getParameter("num2"));
+	public String showResultPage(@RequestParam("num1") int i,@RequestParam("num2") int j,HttpSession session) {
 		int sum = i + j;
-		
-		HttpSession session = req.getSession();
 		session.setAttribute("sum", sum);
 		return "result.jsp";
 	}
