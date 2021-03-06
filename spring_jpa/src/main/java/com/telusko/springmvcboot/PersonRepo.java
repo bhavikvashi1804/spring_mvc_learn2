@@ -12,4 +12,7 @@ public interface PersonRepo extends JpaRepository<Person, Integer>{
 	
 	List<Person> findByName(String name);
 
+	List<Person> findByNameOrderByAge(String name);
+	List<Person> findByNameOrderByAgeDesc(String name);
+
 }
