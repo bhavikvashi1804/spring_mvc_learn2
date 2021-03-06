@@ -1,4 +1,4 @@
-package com.telusko.springmvcboot;
+package com.telusko.springmvcboot.controller;
 
 import java.util.Arrays;
 import java.util.List;
