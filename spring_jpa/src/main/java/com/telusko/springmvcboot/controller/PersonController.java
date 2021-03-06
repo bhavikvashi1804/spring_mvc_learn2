@@ -36,4 +36,11 @@ public class PersonController {
 		m.addAttribute("result", repo.findAll());
 		return "showPersons";
 	}
+	
+	@GetMapping("/findPerson")
+	public String findPersonByName(Model m,@RequestParam String name) {
+		
+		m.addAttribute("result", repo.findByName(name));
+		return "showPersons";
+	}
 }
