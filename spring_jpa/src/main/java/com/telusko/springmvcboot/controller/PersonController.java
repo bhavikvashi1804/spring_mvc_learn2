@@ -50,4 +50,11 @@ public class PersonController {
 		m.addAttribute("result", repo.findByNameOrderByAgeDesc("Bhavik"));
 		return "showPersons";
 	}
+	
+	@GetMapping("/getPersonQuery")
+	public String getPersonQuery(Model m) {
+		
+		m.addAttribute("result", repo.findByName1("Bhavik"));
+		return "showPersons";
+	}
 }
