@@ -17,7 +17,7 @@ public class PersonAPIController {
 	@Autowired
 	PersonRepo repo;
 
-	@GetMapping("/personAPI")
+	@GetMapping(path="/personAPI", produces = {"application/xml"})
 	public List<Person> listOfPerson() {
 		return repo.findAll();
 	}
