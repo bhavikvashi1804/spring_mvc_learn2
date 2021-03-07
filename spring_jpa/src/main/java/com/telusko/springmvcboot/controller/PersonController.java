@@ -57,4 +57,6 @@ public class PersonController {
 		m.addAttribute("result", repo.findByName1("Bhavik"));
 		return "showPersons";
 	}
+	// to accept the result in XML
+	// in postman use: Accept: application/xml
 }
